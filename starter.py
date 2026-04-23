@@ -20,24 +20,24 @@ API_KEY = os.getenv("MY_API_KEY")
 if not API_KEY:
     raise ValueError("API key not found. Check your .env file.")
 
-# Gemini base URL
+# Geminii base URL
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent"
 
-# headers for the API request
+# headers of API request
 HEADERS = {
     "Content-Type": "application/json",
     "x-goog-api-key": API_KEY
 }
 
 
-# just makes the output easier to read
+# makes the output easier to read
 def divider(label):
     print("\n" + "=" * 50)
     print(label)
     print("=" * 50)
 
 
-# this prints the AI text if the request worked
+# Prints the AI text if the request worked
 def print_result(data):
     try:
         print(data["candidates"][0]["content"]["parts"][0]["text"])
@@ -47,7 +47,7 @@ def print_result(data):
 
 
 # Call 1
-# ask Gemini a basic definition question
+# asking Gemini a basic question
 def call_one_post():
     divider("CALL 1")
 
@@ -71,7 +71,7 @@ def call_one_post():
 
 
 # Call 2
-# ask Gemini to explain a topic in a different way
+# asingk Gemini to explain a topic in a different way
 def call_two_post():
     divider("CALL 2")
 
@@ -95,7 +95,7 @@ def call_two_post():
 
 
 # Call 3
-# this one uses input from the user
+# User input creats question 
 def call_three_parameterized(user_input):
     divider("CALL 3")
 
