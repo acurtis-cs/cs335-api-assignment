@@ -104,3 +104,6 @@ Response:
 Today is Thursday.
 
 Program finished successfully.
+
+<img width="936" height="452" alt="image" src="https://github.com/user-attachments/assets/9d8bcde9-12c9-4cb5-9c18-111c16b82b4d" />
+
